@@ -1,6 +1,9 @@
 export * from './App';
 export * from './components/atomos/Icono';
 export * from './components/moleculas/Btnsave';
+export * from './components/organismos/FooterLogin';
+export * from './components/organismos/formularios/InputText';
+export * from './components/organismos/formularios/RegistrarAdmin';
 export * from './components/organismos/MenuHambur';
 export * from './components/organismos/sidebar/Sidebar';
 export * from './components/organismos/sidebar/SidebarCard';
@@ -8,6 +11,7 @@ export * from './components/organismos/ToggleTema';
 export * from './components/templates/Home.Template';
 export * from './components/templates/Login.Template';
 export * from './context/AuthContext';
+export * from './hooks/ProtectedRoutes';
 export * from './main';
 export * from './pages/Home';
 export * from './pages/Login';

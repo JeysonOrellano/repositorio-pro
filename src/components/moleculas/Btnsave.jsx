@@ -35,7 +35,7 @@ const Container = styled.button`
     box-shadow: 0.1em 0.1em #000;
     transition: 0.2s;
     white-space: 1px;
-    color: #000;
+    color: #f8f8f8;
     a{
       text-decoration:none;
       color: #000;

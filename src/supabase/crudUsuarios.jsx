@@ -1,7 +1,7 @@
 import Swal from "sweetalert2";
 import { supabase } from "../index";
 
-export const InsertarUsuarios = async () => {
+export const InsertarUsuarios = async (p) => {
   const { data, error } = await supabase
     .from("usuarios")
     .insert(p)
@@ -11,7 +11,7 @@ export const InsertarUsuarios = async () => {
     Swal.fire({
       icon: "error",
       title: "Oops...",
-      text: "Error al insertar usuario"+error.message,
+      text: "Error al insertar usuarios"+error.message,
     });
   }
   if(data) return data
