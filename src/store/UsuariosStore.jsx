@@ -1,9 +1,8 @@
 import { create } from "zustand";
-import {devtools} from "zustand/middleware";
 import { supabase } from "../supabase/supabase.config";
 import { InsertarUsuarios, MostrarUsuarios } from "../index";
 
-export const useUsuariosStore = create(devtools((get, set) => ({
+export const useUsuariosStore = create((get, set) => ({
   insertarUsuarioAdmin: async (p) => {
     const { data, error } = await supabase.auth.signUp({
       email: p.correo,
@@ -19,12 +18,12 @@ export const useUsuariosStore = create(devtools((get, set) => ({
     return dataUser;
   },
 
-
-
+  idusuario:0,
+  
   mostrarUsuarios:async()=>{
     const response=await MostrarUsuarios();
-    console.log("Respuesta de usuario",response.id)
-    set({idusuario:response.id},false,'mostrarUsuarios');
+    console.log("Respuesta de usuario",response)
+    set({idusuario:response.id});
     return response
   }
-}),{name:"UsuariosStore"}));
+}));
